@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-jyvl
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:eyuen-tenant-devfile-sample-jyvl
+      - image: quay.io/redhat-appstudio/user-workload@sha256:79197095c2def1740faa7141c7e034d1e22d98e622b9b3eb90b69edb17380656
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
