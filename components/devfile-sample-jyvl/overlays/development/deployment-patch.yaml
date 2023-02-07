@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-jyvl
+  namespace: eyuen-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:79197095c2def1740faa7141c7e034d1e22d98e622b9b3eb90b69edb17380656
+        name: container-image
+        resources: {}
+status: {}
