@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-jyvl
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-jyvl
+    app.kubernetes.io/part-of: my-app2
+  name: devfile-sample-jyvl
+  namespace: eyuen-tenant
+spec:
+  port:
+    targetPort: 3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: devfile-sample-jyvl
+    weight: 100
+status: {}
